@@ -1,0 +1,31 @@
+<html>
+<head>
+<style>
+body {
+	background-color: lightgreen;
+	text-align: center;
+}
+
+</style>
+<title>Warbands Game!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+
+<body> 
+<div class="container">
+	<p><a href="/home">Home|</a><a href="/">Warbands|</a><a href="/news">News|</a><a href="/rules">Rules|</a><a href="/about">About|</a><a href="/contact">Contact|</a><a href="/logout">Logout|</a><a href="signup">SignUp</a></p>
+	<!-- For the child template: -->
+	{% block content %}{% endblock %}
+	<!-- errors -->
+	{% if error %}
+	<p class="error"><strong>Error:</strong> {{ error }}</p>
+	{% endif %}
+
+	<!-- messages -->
+	{% for message in get_flashed_messages() %}
+	{{ message }}
+	{% endfor %}
+</div>
+</body>
+</html>
