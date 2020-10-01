@@ -9,7 +9,7 @@ run:
 python2 framework4.py
 to run the fulll application
 
-You can view the application at:
+application can be viewed at:
 localhost:5000
 
 tests.py is considered illustrative of unittests and future development and not working code to be considered with this application coursework.
